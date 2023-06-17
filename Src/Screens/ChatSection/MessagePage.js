@@ -122,7 +122,7 @@ const MessagePage = ({ navigation, route }) => {
         const messagedata2 ={
             
         }
-        fetch('http://192.168.8.112:3000/savemessagetodb', {
+        fetch('http://10.33.102.205:3000/savemessagetodb', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -160,7 +160,7 @@ const MessagePage = ({ navigation, route }) => {
 
 
     const loadMessages = (temproomid) => {
-        fetch('http://192.168.8.112:3000/getmessages', {
+        fetch('http://10.33.102.205:3000/getmessages', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

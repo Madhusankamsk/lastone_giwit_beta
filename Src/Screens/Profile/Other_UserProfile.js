@@ -61,14 +61,14 @@ const Other_UserProfile = ({ navigation, route }) => {
         loaddata()
     }, [])
 
-    // console.log('userdata ', userdata)
+     console.log('userdata ', userdata)
 
 
     const FollowThisUser = async () => {
         console.log('FollowThisUser')
         const loggeduser = await AsyncStorage.getItem('user');
         const loggeduserobj = JSON.parse(loggeduser);
-        fetch('http://10.33.70.155:3000/followuser', {
+        fetch('http://10.33.102.205:3000/followuser', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -95,7 +95,7 @@ const Other_UserProfile = ({ navigation, route }) => {
         AsyncStorage.getItem('user')
             .then(loggeduser => {
                 const loggeduserobj = JSON.parse(loggeduser);
-                fetch('http://10.33.70.155:3000/checkfollow', {
+                fetch('http://10.33.102.205:3000/checkfollow', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -131,7 +131,7 @@ const Other_UserProfile = ({ navigation, route }) => {
         console.log('UnfollowThisUser')
         const loggeduser = await AsyncStorage.getItem('user');
         const loggeduserobj = JSON.parse(loggeduser);
-        fetch('http://10.33.70.155:3000/unfollowuser', {
+        fetch('http://10.33.102.205:3000/unfollowuser', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

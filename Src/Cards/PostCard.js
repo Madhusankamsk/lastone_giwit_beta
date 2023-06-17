@@ -133,7 +133,8 @@ const PostCard = ({
           </TouchableOpacity>
         </View>
 
-        {showCommentsBox === index && (
+        {showCommentsBox === index && 
+        (
           <View style={styles.commentBox}>
             {/* Display existing comments */}
             {post.comment.map((comment, commentIndex) => (
@@ -248,8 +249,12 @@ const styles = StyleSheet.create({
     color: 'red',
   },
   commentBox: {
-    padding: 10,
+    //padding: 10,
     backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    justifyContent: 'center',
+    height: '100%',
+    width: '100%',
+    position: 'absolute'
   },
   commentText: {
     color: 'white',
